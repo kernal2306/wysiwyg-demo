@@ -14,6 +14,26 @@ if (Meteor.isClient) {
       Session.set('counter', Session.get('counter') + 1);
     }
   });
+  
+  Template.wysiwyg.helpers({
+    render: function(){
+      var templateText = $('summernote').code();
+      console.log(templateText);
+    }
+    
+  });
+  
+  Template.wysiwyg.onRendered(function(){
+    $(document).ready(function() {
+      $('#summernote').summernote();
+    });
+  });
+  
+  Template.wysiwyg.events({
+    'clicked': function(){
+      console.log("you have selected text to edit");
+    }
+  });
 }
 
 if (Meteor.isServer) {

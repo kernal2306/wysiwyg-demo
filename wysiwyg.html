@@ -4,9 +4,20 @@
 
 <body>
   <h1>Welcome to Meteor!</h1>
-
+  
+  
   {{> hello}}
+  
+  
+  
+  {{> wysiwyg}}
+  
 </body>
+
+<template name="wysiwyg">
+    {{render}}
+    <div id="summernote" class="form-group">Hello there testing area</div>
+</template>
 
 <template name="hello">
   <button>Click Me</button>

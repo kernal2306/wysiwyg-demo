@@ -25,7 +25,14 @@ if (Meteor.isClient) {
   
   Template.wysiwyg.onRendered(function(){
     $(document).ready(function() {
-      $('#summernote').summernote();
+      $('#summernote').summernote({
+        height: 300,                 
+
+        minHeight: null,            
+        maxHeight: null,             
+
+        focus: true,                
+        });
     });
   });
   

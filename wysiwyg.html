@@ -4,19 +4,22 @@
 
 <body>
   <h1>Welcome to Meteor!</h1>
-  
+ 
+  {{> wysiwyg}}
+ 
   
   {{> hello}}
-  
-  
-  
-  {{> wysiwyg}}
   
 </body>
 
 <template name="wysiwyg">
     {{render}}
-    <div id="summernote" class="form-group">Here is the testing are</div>
+    <div id="summernote" class="form-group">
+      <h3>Here is the testing area</h3>
+      <p>More type that is in a paragraph</p>
+      <p>And still even more</p>
+      <h1>Another header</h1>
+      </div>
 </template>
 
 <template name="hello">

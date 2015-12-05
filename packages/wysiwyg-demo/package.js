@@ -12,8 +12,10 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  api.use(['templating','summernote:summernote']);
-  api.addFiles(['wysiwyg-demo.html','wysiwyg-demo.js'],'client');
+  api.use(['templating','mongo','insecure','summernote:summernote']);
+  api.addFiles(['both.js'],['client','server']);
+  api.addFiles(['server.js'],'server');
+  api.addFiles(['wysiwyg-demo.html','client.js'],'client');
 });
 
 Package.onTest(function(api) {

@@ -12,10 +12,11 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  api.use(['templating','mongo','insecure','summernote:summernote']);
+  api.use(['underscore', 'check', 'templating','mongo','insecure','summernote:summernote']);
   api.addFiles(['both.js'],['client','server']);
   api.addFiles(['server.js'],'server');
-  api.addFiles(['wysiwyg-demo.html','client.js'],'client');
+  api.addFiles(['wysiwyg-demo.html', 'wysiwyg-demo.js','client.js'],'client');
+  api.export(['Datastore']);
 });
 
 Package.onTest(function(api) {

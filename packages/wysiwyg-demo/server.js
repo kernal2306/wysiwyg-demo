@@ -15,7 +15,6 @@ Meteor.methods({
     'storedata': function(id, stuff){
         check(stuff, String);
         var info = stuff;
-        
         console.log(info);
         Datastore.update({_id: id}, {$set: {desc: info}});
     }
